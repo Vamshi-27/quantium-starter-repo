@@ -38,7 +38,11 @@ app = dash.Dash(__name__)
 
 # Layout
 app.layout = html.Div(children=[
-    html.H1("Pink Morsel Sales Visualizer", style={"textAlign": "center"}),  # Header
+    html.H1("Pink Morsel Sales Visualizer", style={
+        "textAlign": "center", 
+        "fontFamily": "Times New Roman", 
+        "color": "blue"
+    }),  # Header
     dcc.Graph(id="sales-chart", figure=fig)  # Line chart
 ])
 
